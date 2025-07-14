@@ -31,7 +31,7 @@ public class manavKasa {
         double patlicanKg = scanner.nextDouble();
 
         double toplamTutar = (armutKg * armut) + (elmaKg * elma) + (domatesKg * domates)
-                + (muzKg * muz) + (patlicanKg * patlican); // TODO toplam tutar
+                + (muzKg * muz) + (patlicanKg * patlican);
 
         System.out.println("Toplam Tutar :" + toplamTutar);
 
