@@ -12,7 +12,7 @@ public class VucutKitleEndeksi {
         System.out.println("Lütfen kilonuzu giriniz :");
         int weight = scanner.nextInt();
 
-        double vki = weight / (height * height); // TODO Vücut Kitle İndeks formul
+        double vki = weight / (height * height);
 
         System.out.println("Vücut Kitle İndeksiniz : " + vki);
     }
