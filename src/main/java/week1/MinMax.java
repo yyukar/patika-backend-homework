@@ -1,41 +1,41 @@
+/*
+Java ile klavyeden girilen N tane sayma sayısından
+en büyük ve en küçük sayıları bulan ve bu sayıları ekrana yazan programı yazın.
+*/
+
 package week1;
 
 import java.util.Scanner;
 
 public class MinMax {
     public static void main(String[] args) {
-        
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner= new Scanner(System.in);
 
-        //döngüler ile kullanıcının girdiği sayıya kadar çift olan sayıları bulan program
+        // Kullanıcının gireceği sayı adedine göre dizi oluşturulur
+        System.out.print("Kaç tane sayı gireceksiniz: ");
+        int number  = scanner.nextInt();
+        int[] numbers = new int[number];
 
-        System.out.println("bir sayi giriniz: ");
-        int input = scanner.nextInt();
+        // Kullanıcıdan sayılar alınır ve diziye kaydedilir
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print((i+1) + ". Sayıyı giriniz: ");
+            numbers[i] = scanner.nextInt();
+        }
 
-        for (int i = 0; i <= input; i++) {
-            if (i%2==0) {
-                System.out.println(i +" bir çift sayi");
+        // En büyük ve en küçük değerler bulunur
+        int min = numbers[0], max = numbers[0];
+        for (int i = 0; i < numbers.length; i++) {
+            if (max < numbers[i]) {
+                max = numbers[i];
+            } else if (min > numbers[i]) {
+                min = numbers[i];
             }
         }
 
-        // 0'dan girilen sayıya kadar olan sayılardan 3 ve 4'e tam bölünen
-        // sayıların ortalamasını hesaplayan program
+        // Sonuç yazdırılır.
+        System.out.println("En büyük sayı: " + max);
+        System.out.println("En küçük sayı: " + min);
 
-        System.out.println("bir sayı giriniz: ");
-        int input2 = scanner.nextInt();
-        double sum = 0;
-        int count = 0;
-        for (int i = 0; i <= input2; i++) {
-            if(i % 3 == 0 && i % 4 == 0){
-                sum = sum + i;
-                count++;
-            }
-        }
-        if(count != 0) {
-            double average = sum / count;
-            System.out.println("3 ve 4'e tam bölünen sayıların ortalaması: " + average);
-        } else {
-            System.out.println("3 ve 4'e tam bölünen sayı bulunamadı.");
-        }
+        scanner.close();
     }
 }
