@@ -1,3 +1,10 @@
+/*
+Java ile kullanıcıdan doğum tarihini alıp Çin Zodyağı değerini hesaplayan program yazınız.
+Çin Zodyağı nasıl hesaplanır?
+
+Çin zodyağı hesaplanırken kişinin doğum yılının 12 ile bölümünde kalana göre bulunur.
+*/
+
 package week1;
 
 import java.util.Scanner;
@@ -5,11 +12,22 @@ import java.util.Scanner;
 public class CinZodyagi {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
+        // Kullanıcıdan doğum yılı alınır
         System.out.println("Doğum Yılınızı Giriniz :");
         int birthDate = scanner.nextInt();
 
+        // Girdi kontrolü
+        if (birthDate < 0) {
+            System.out.println("Lütfen pozitif değerler giriniz.");
+            scanner.close();
+            return;
+        }
+
+        // Çin Zodyağı için 12'ye göre mod alınır
         int calculate = birthDate %12;
 
+        // Mod sonucuna göre Çin Zodyağı burcu belirlenir
         switch (calculate) {
             case 0:
                 System.out.println("Çin Zodyağı Burcunuz : Maymun");
@@ -49,7 +67,8 @@ public class CinZodyagi {
                 break;
             default:
                 System.out.println("Geçersiz yıl girdiniz.");
-
         }
+
+        scanner.close();
     }
 }
