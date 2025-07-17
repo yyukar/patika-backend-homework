@@ -23,7 +23,6 @@ public class UcakBiletFiyati {
         // Kullanıcıdan girişler alınır
         System.out.println("Mesafeyi km türünden giriniz :");
         int distance = scanner.nextInt();
-        double sum = distance * 0.10;
 
         System.out.println("Yaşınızı giriniz :");
         int age = scanner.nextInt();
@@ -37,6 +36,10 @@ public class UcakBiletFiyati {
             scanner.close();
             return;
         }
+
+        // Uçuşun toplam fiyatı
+        double distancePrice = 0.10;
+        double sum = distance * distancePrice;
 
         // Yolculuk tipleri ve toplam hesabı
         switch (travelType) {
