@@ -1,5 +1,5 @@
-# Patika+ Back-End Web Developer Programı
-## 2. Hafta - Geçerli Parola Kontrolü
+# week 2
+## Geçerli Parola Kontrolü
 
 Kullanıcıdan aldığınız parolanın geçerli olup olmadığını aşağıdaki kurallara göre kontrol ederek "Geçerli Parola" ya da "Geçersiz Parola" şeklinde dönen kodu yazınız.
 ## Kontrol Kuralları

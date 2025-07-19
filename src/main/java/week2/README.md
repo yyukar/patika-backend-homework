@@ -1,3 +1,7 @@
-# Fullstack Developer Bootcamp patika.dev
-##  Patika+ Back-End Web Developer
-### Week 2
+# Week 2
+## Content
+- Geçerli Şifre Kontrolü
+- Sayı Yuvarlama (OPSİYONEL)
+- Asal Sayı Bulan Program
+- Üs Hesabı Yapan Program
+- Maaş Hesaplayıcı
