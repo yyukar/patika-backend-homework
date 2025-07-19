@@ -26,6 +26,7 @@ public class PasswordControl {
         return password.length() >= 8 &&
                 !password.contains(" ") &&
                 Character.isUpperCase(password.charAt(0)) &&
-                password.charAt(password.length() - 1) == '?';
+                password.charAt(password.length() - 1) == '?' &&
+                password.endsWith("?");
     }
 }
