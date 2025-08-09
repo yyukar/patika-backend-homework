@@ -23,5 +23,14 @@ public class EntryLineByLine {
         System.out.println("Zeynep = " + scores.get("Zeynep"));
         System.out.println("Burak = " + scores.get("Burak"));
 
+        /* alternative
+        // Looping through each entry (key-value pair) in the map
+        for (Map.Entry<String, Integer> entry : scores.entrySet()) {
+            // entry.getKey() returns the key (name)
+            // entry.getValue() returns the value (score)
+            System.out.println(entry.getKey() + " = " + entry.getValue());
+        }
+         */
+
     }
 }
